@@ -58,13 +58,13 @@ body {
   height: 100%;
 }
 
-.logo {
-  font-family: "DM Serif Display", serif;
-  color: white;
-  font-size: 8rem;
-  letter-spacing: 0.5rem;
-  padding: 0;
-  margin: 0;
+.logo-image {
+  background-image: url("/images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
   transform: translateY(-50%);
   position: absolute;
   top: 50vh;
@@ -72,7 +72,7 @@ body {
   transition: all 2s ease-in-out;
 }
 
-.intro--disappear .logo {
+.intro--disappear .logo-image {
   top: 42px;
   transform: scale(0.25);
   transform-origin: center top;
@@ -121,11 +121,11 @@ body {
 
 .explore {
   padding: 1rem 2rem;
-  border: none;
+  border: 1px solid white;
   font-family: "DM Serif Display", serif;
   font-size: 1.25rem;
   letter-spacing: 0.25rem;
-  color: #3535cc;
+  color: #000000;
   border-radius: 32px;
   cursor: pointer;
   display: inline-block;
@@ -151,7 +151,7 @@ body {
 
 .explore:before {
   content: "";
-  background: #3535cc;
+  background: #000000;
   position: absolute;
   width: 0%;
   bottom: 0;
@@ -159,7 +159,7 @@ body {
   height: 0%;
   transition: 0.42s ease-in-out;
   z-index: -1;
-  transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%); 
 }
 
 .intro--disappear .explore {
@@ -175,6 +175,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   opacity: 0;
   transition: opacity 4s ease-in-out;
 }
@@ -189,21 +190,51 @@ body {
   color: white;
 }
 
+.outro__button {
+  padding: 1rem 2rem;
+  border: none;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.25rem;
+  color: #000000; /* Black text on white button */
+  border-radius: 32px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 50px; /* Increased margin to move it further below text */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.42s ease-in-out;
+  background-color: white; /* Explicitly set initial background to white */
+}
+
+.outro__button:hover {
+  color: white;
+}
+
+.outro__button:hover:before {
+  width: 200%;
+  height: 300%;
+  border-radius: 100%;
+}
+
+.outro__button:before {
+  content: "";
+  background: #000000; /* Black background on hover */
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 50%;
+  height: 0%;
+  transition: 0.42s ease-in-out;
+  z-index: -1;
+  transform: translateX(-50%) translateY(50%);
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 768px) {
-  .logo {
-    font-size: 3rem;
-    letter-spacing: 0.25rem;
-  }
-
-  .intro--disappear .logo {
-    top: 24px;
-    transform: scale(0.5);
-    transform-origin: center top;
-  }
-
-  .spinner__image {
+  .logo-image {
     width: 82px;
     height: 82px;
   }

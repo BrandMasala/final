@@ -3,7 +3,7 @@ import { usePlay } from "../contexts/Play";
 
 export const Overlay = () => {
   const { progress } = useProgress();
-  const { play, end, setPlay, hasScroll } = usePlay();
+  const { play, end, setPlay, setEnd, hasScroll } = usePlay();
   return (
     <div
       className={`overlay ${play ? "overlay--disable" : ""}
@@ -14,12 +14,7 @@ export const Overlay = () => {
       />
       {progress === 100 && (
         <div className={`intro ${play ? "intro--disappear" : ""}`}>
-          <h1 className="logo">
-            WAWATMOS
-            <div className="spinner">
-              <div className="spinner__image" />
-            </div>
-          </h1>
+          <div className="logo-image" />
           <p className="intro__scroll">Scroll to begin the journey</p>
           <button
             className="explore"
@@ -32,7 +27,17 @@ export const Overlay = () => {
         </div>
       )}
       <div className={`outro ${end ? "outro--appear" : ""}`}>
-        <p className="outro__text">Wish you had a great flight with us...</p>
+        <p className="outro__text">Wish you had a great journey with us...</p>
+      
+        <button
+          className="outro__button"
+          onClick={() => {
+            setEnd(false);
+            setPlay(true);
+          }}
+        >
+          Know about us more
+        </button>
       </div>
     </div>
   );

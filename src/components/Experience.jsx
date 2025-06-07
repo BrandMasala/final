@@ -27,9 +27,6 @@ export const Experience = () => {
       new THREE.Vector3(100, 0, -2 * CURVE_DISTANCE),
       new THREE.Vector3(-100, 0, -3 * CURVE_DISTANCE),
       new THREE.Vector3(100, 0, -4 * CURVE_DISTANCE),
-      new THREE.Vector3(0, 0, -5 * CURVE_DISTANCE),
-      new THREE.Vector3(0, 0, -6 * CURVE_DISTANCE),
-      new THREE.Vector3(0, 0, -7 * CURVE_DISTANCE),
     ],
     []
   );
@@ -50,8 +47,8 @@ export const Experience = () => {
           curvePoints[1].y,
           curvePoints[1].z
         ),
-        subtitle: `Welcome to Wawatmos,
-Have a seat and enjoy the ride!`,
+        image: "/images/logo.png",
+        
       },
       {
         cameraRailDist: 1.5,
@@ -60,9 +57,7 @@ Have a seat and enjoy the ride!`,
           curvePoints[2].y,
           curvePoints[2].z
         ),
-        title: "Services",
-        subtitle: `Do you want a drink?
-We have a wide range of beverages!`,
+        image: "/images/logo.png",
       },
       {
         cameraRailDist: -1,
@@ -71,8 +66,8 @@ We have a wide range of beverages!`,
           curvePoints[3].y,
           curvePoints[3].z
         ),
-        title: "Fear of flying?",
-        subtitle: `Our flight attendants will help you have a great journey`,
+        title: "Coming Soon",
+        // subtitle: `Our flight attendants will help you have a great journey`,
       },
       {
         cameraRailDist: 1.5,
@@ -81,8 +76,9 @@ We have a wide range of beverages!`,
           curvePoints[4].y,
           curvePoints[4].z - 12
         ),
-        title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        subtitle: `Wish you had a great flight`,
+        title: undefined,
+        image: undefined,
       },
     ];
   }, []);
@@ -175,88 +171,88 @@ We have a wide range of beverages!`,
         ),
         rotation: new Euler(Math.PI / 4, 0, Math.PI / 3),
       },
-      // THIRD POINT
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x + 3,
-          curvePoints[3].y - 10,
-          curvePoints[3].z + 50
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x - 10,
-          curvePoints[3].y,
-          curvePoints[3].z + 30
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(4, 4, 4),
-        position: new Vector3(
-          curvePoints[3].x - 20,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 8
-        ),
-        rotation: new Euler(Math.PI, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[3].x + 0,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 98
-        ),
-        rotation: new Euler(0, Math.PI / 3, 0),
-      },
-      // FOURTH POINT
-      {
-        scale: new Vector3(2, 2, 2),
-        position: new Vector3(
-          curvePoints[4].x + 3,
-          curvePoints[4].y - 10,
-          curvePoints[4].z + 2
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x + 24,
-          curvePoints[4].y - 6,
-          curvePoints[4].z - 42
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x - 4,
-          curvePoints[4].y + 9,
-          curvePoints[4].z - 62
-        ),
-        rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
-      },
-      // FINAL
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[7].x + 12,
-          curvePoints[7].y - 5,
-          curvePoints[7].z + 60
-        ),
-        rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[7].x - 12,
-          curvePoints[7].y + 5,
-          curvePoints[7].z + 120
-        ),
-        rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
-      },
+      // // THIRD POINT
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[3].x + 3,
+      //     curvePoints[3].y - 10,
+      //     curvePoints[3].z + 50
+      //   ),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[3].x - 10,
+      //     curvePoints[3].y,
+      //     curvePoints[3].z + 30
+      //   ),
+      //   rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(4, 4, 4),
+      //   position: new Vector3(
+      //     curvePoints[3].x - 20,
+      //     curvePoints[3].y - 5,
+      //     curvePoints[3].z - 8
+      //   ),
+      //   rotation: new Euler(Math.PI, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(5, 5, 5),
+      //   position: new Vector3(
+      //     curvePoints[3].x + 0,
+      //     curvePoints[3].y - 5,
+      //     curvePoints[3].z - 98
+      //   ),
+      //   rotation: new Euler(0, Math.PI / 3, 0),
+      // },
+      // // FOURTH POINT
+      // {
+      //   scale: new Vector3(2, 2, 2),
+      //   position: new Vector3(
+      //     curvePoints[4].x + 3,
+      //     curvePoints[4].y - 10,
+      //     curvePoints[4].z + 2
+      //   ),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[4].x + 24,
+      //     curvePoints[4].y - 6,
+      //     curvePoints[4].z - 42
+      //   ),
+      //   rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[4].x - 4,
+      //     curvePoints[4].y + 9,
+      //     curvePoints[4].z - 62
+      //   ),
+      //   rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
+      // },
+      // // FINAL
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[7].x + 12,
+      //     curvePoints[7].y - 5,
+      //     curvePoints[7].z + 60
+      //   ),
+      //   rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[7].x - 12,
+      //     curvePoints[7].y + 5,
+      //     curvePoints[7].z + 120
+      //   ),
+      //   rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
+      // },
     ],
     []
   );
@@ -428,8 +424,8 @@ We have a wide range of beverages!`,
 
   const tl = useRef();
   const backgroundColors = useRef({
-    colorA: "#3535cc",
-    colorB: "#abaadd",
+    colorA: "#020210", // Deep Space Black
+    colorB: "#0A0A20", // Dark Blue/Purple
   });
 
   const planeInTl = useRef();
@@ -440,18 +436,18 @@ We have a wide range of beverages!`,
 
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#6f35cc",
-      colorB: "#ffad30",
+      colorA: "#100A2C", // Darker Purple
+      colorB: "#2A0A40", // Even Darker Purple
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#424242",
-      colorB: "#ffcc00",
+      colorA: "#000B30", // Blue-Violet
+      colorB: "#000510", // Very Dark Blue
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#81318b",
-      colorB: "#55ab8f",
+      colorA: "#000000", // Absolute Black
+      colorB: "#000000", // Absolute Black
     });
 
     tl.current.pause();
@@ -523,7 +519,7 @@ We have a wide range of beverages!`,
         </group>
         {/* TEXT */}
         {textSections.map((textSection, index) => (
-          <TextSection {...textSection} key={index} />
+          <TextSection {...textSection} sceneOpacity={sceneOpacity} key={index} />
         ))}
 
         {/* LINE */}
